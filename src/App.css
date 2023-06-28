@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 0%, #a626d3 100%);
+}
+
+.nav--logo {
+  height: 50%;
+}
+
+.nav--title {
+  color: #fff;
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+}
