@@ -2,14 +2,21 @@ import React from "react";
 import memesData from "../public/memesData";
 
 export default function Meme() {
-  const [memeImage, setMemeImage] = React.useState("");
-  function handOnClick() {
-    setMemeImage(
-      memesData.data.memes[
-        Math.floor(Math.random() * memesData.data.memes.length)
-      ].url
-    );
+  const [meme, setMeme] = React.useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "",
+  });
+  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+
+  function handleOnClick() {
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      randomImage:
+        allMemeImages.data.memes[Math.floor(Math.random() * 101)].url,
+    }));
   }
+
   return (
     <main>
       <div className="meme--form">
@@ -21,10 +28,10 @@ export default function Meme() {
             placeholder="Bottom Text"
           />
         </div>
-        <button className="meme--button" onClick={handOnClick}>
+        <button className="meme--button" onClick={handleOnClick}>
           Get new meme image 🖼️
         </button>
-        <img src={memeImage} className="meme--image" />
+        <img src={meme.randomImage} className="meme--image" />
       </div>
     </main>
   );
