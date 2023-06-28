@@ -1,11 +1,14 @@
 * {
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
 }
+
+/* Header styling */
 
 nav {
   display: flex;
@@ -22,8 +25,50 @@ nav {
 
 .nav--title {
   color: #fff;
-  font-size: 21px;
-  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -1.8px;
+}
+
+/* Main styling */
+
+main {
+  width: 75%;
+  height: calc(100vh - 65px);
+  margin: 0 auto;
+}
+
+.meme--form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.meme--inputs {
+  width: 70%;
+  margin-top: 36px;
+  display: flex;
+  gap: 17px;
+}
+
+.meme--input {
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  text-indent: 5px;
+}
+
+.meme--button {
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #711f8d 0%, #a818da 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #d5d4d8;
 }
